@@ -20,7 +20,7 @@
     <a href="https://github.com/Birblover/michaeldle/issues">Request Feature</a>
   </p>
   
-[![license-shield][license-url]
+<h4>MIT License</h4>
 
 </div>
 
@@ -30,9 +30,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -51,14 +48,6 @@ Guess the Michaeldle in 6 tries.
 If you guess within 5% of the target price, you win!
 
 A new Michaeldle is available every day!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-* [![HTML][HTML5]][HTML-url]
-* [![CSS][CSS3]][CSS-url]
-* [![JS][JavaScript]][JavaScript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,15 +77,3 @@ This project would not have been possible without the following resources:
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT
-[license-url]: https://github.com/Birblover/michaeldle/blob/main/LICENSE
-[HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
-[HTML-url]: https://en.wikipedia.org/wiki/HTML
-[CSS3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
-[CSS-url]: https://en.wikipedia.org/wiki/CSS
-[JavaScript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
-[JavaScript-url]: https://en.wikipedia.org/wiki/JavaScript
