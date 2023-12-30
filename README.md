@@ -3,9 +3,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://costcodle.com">
-    <img src="assets/CD.png" alt="Logo" width="80" height="80">
+  <a href="https://michaeldle.com">
+    Michaeldle.com
   </a>
+  <a href="https://newagent-nqcafp.web.app">Backup link</a>
 
 <h3 align="center">COSTCODLE</h3>
 
