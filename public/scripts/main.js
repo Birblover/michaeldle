@@ -7,6 +7,7 @@ let productName;
 let productPrice;
 let productImage;
 let string;
+let localGameNumber;
 
 //Timeout IDs
 let shakeTimeout;
@@ -65,16 +66,22 @@ function playGame() {
 function fetchGameData(gameNumber) {
   if (+gameNumber.toString().slice(-1) == 1 ) {
     string = "./airbrushing.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
   } else {
     string = "./trees.json"
+    localGameNumber = gameNumber;
   }
     fetch(string)
       .then((response) => response.json())
       .then((json) => {
-        productName = json[`${gameNumber}`].Title;
-        productPrice = json[`${gameNumber}`].Field3;
+        productName = json[`${localGameNumber}`].Title;
+        productPrice = json[`${localGameNumber}`].Field3;
         productPrice = Number(productPrice.slice(1, productPrice.length));
-        productImage = json[`${gameNumber}`].Image;
+        productImage = json[`${localGameNumber}`].Image;
 
         initializeGame();
       });
