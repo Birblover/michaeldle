@@ -1,89 +1,332 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MICHAELDLE</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.7.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- Google tag (gtag.js) -->
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+
+    <!-- Favicon Configuration -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/public/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#dcdcdc" />
+    <meta name="msapplication-config" content="/public/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="styles/overlay.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      defer
+    ></script>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/searchBar.js" defer></script>
   </head>
+
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div id="main-page">
+      <header id="site-header">
+        <div id="header-container">
+          <button id="info-button" data-overlay="info-overlay" type="button">
+            ?
+          </button>
+          <h1 id="title" class="title costco-red">
+            <center>MICHAEL<span class="costco-blue">DLE</span></center>
+          </h1>
+          <button id="stat-button" data-overlay="stats-overlay" type="button">
+            <img
+              src="./assets/stat-logo.svg"
+              style="height: 100%; width: 100%"
+            />
+          </button>
+        </div>
+      </header>
+
+      <main id="game-container">
+        <div id="share-toast" class="animate__animated hide">
+          <center>Results copied to clipboard</center>
+        </div>
+        <div id="info-card" class="animate__animated">
+          <div id="image-container"></div>
+          <div id="product-info"></div>
+        </div>
+        <div id="game-stats"></div>
+        <div id="guesses-container">
+          <div id="warning-toast" class="animate__animated hide">
+            <center>Invalid Guess ⚠️</center>
+          </div>
+          <div id="1" class="guess-container"></div>
+          <div id="2" class="guess-container"></div>
+          <div id="3" class="guess-container"></div>
+          <div id="4" class="guess-container"></div>
+          <div id="5" class="guess-container"></div>
+          <div id="6" class="guess-container"></div>
+          <div
+            id="input-container"
+            class="guess-container transparent-background"
+          >
+            <div id="text-input-container">
+              <div id="input-label">$</div>
+              <input
+                id="guess-input"
+                type="text"
+                pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                data-type="currency"
+                placeholder="Enter a guess..."
+              />
+            </div>
+            <div id="button-container">
+              <button id="guess-button" class="active">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+        <div id="info-overlay" class="overlay" style="display: none">
+          <div id="info-body" class="overlay-body">
+            <div class="info-section">
+              <h3><u>The game</u></h3>
+              <p>
+                Guess the <span class="costco-red">MICHAEL</span
+                ><span class="costco-blue">DLE</span> in 6 tries.
+              </p>
+              <br />
+              <ul style="list-style-type: square">
+                <li>Each guess must be a valid price.</li>
+                <li>
+                  Incorrect guesses will help guide you to the target price.
+                </li>
+              </ul>
+              <br />
+              <p>If you guess within 5% of the target price, you win!</p>
+              <br />
+              <p>
+                A new <span class="costco-red">MICHAEL</span
+                ><span class="costco-blue">DLE</span> is available every day!
+              </p>
+            </div>
+            <div class="info-section">
+              <h3><u>Examples</u></h3>
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">$10.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-far"
+                >
+                  &uarr;
+                </div>
+              </div>
+              <p>
+                First guess of $10.00 is low by more than 25% of the target
+                price.
+              </p>
+              <br />
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">$18.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-near"
+                >
+                  &darr;
+                </div>
+              </div>
+              <p>
+                Next guess of $18.00 is too high but within 25% of the target
+                price.
+              </p>
+              <br />
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">$16.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-win"
+                >
+                  &check;
+                </div>
+              </div>
+              <p>
+                The guess of $16.00 was within 5% of the target price! You win!
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                If you would like to support my work, you can
+                not buy me a coffee!<span style="font-size: 14px">☕</span></a
+                >
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                Source code available on my
+                <a
+                  href="https://github.com/KermWasTaken"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >GitHub</a
+                >!
+              </p>
+              <p>
+                Suggestions? Find a bug?
+                <a href="mailto: zoebe44@gmail.com">Let me know!</a>
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                Special thanks to
+                <a
+                  href="https://oec.world/en/tradle/"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                >
+                  <span style="color: rgb(255, 166, 63)">TRAD</span>LE</a
+                >
+                and
+                <a
+                  href="https://www.nytimes.com/games/wordle/index.html"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >Wordle</a
+                >
+                for inspiring <span class="costco-red">MICHAEL</span
+                ><span class="costco-blue">DLE</span>!
+              </p>
+              <br />
+              <p>And thank you for checking out my game!</p>
+            </div>
+            <div style="margin-top: 8px">
+              <p>
+                Created by
+                <a
+                  href="https://github.com/KermWasTaken"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >@Kerm</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="stats-overlay" class="overlay" style="display: none">
+          <div id="stat-body" class="overlay-body">
+            <p id="statistics-title">STATISTICS</p>
+            <div id="statistics">
+              <div class="statistic">
+                <div id="number-wins" class="stat"></div>
+                <div class="descriptor">Played</div>
+              </div>
+              <div class="statistic">
+                <div id="win-percent" class="stat"></div>
+                <div class="descriptor">Win %</div>
+              </div>
+              <div class="statistic">
+                <div id="current-streak" class="stat"></div>
+                <div class="descriptor">
+                  <center>Current<br />Streak</center>
+                </div>
+              </div>
+              <div class="statistic">
+                <div id="max-streak" class="stat"></div>
+                <div class="descriptor">
+                  <center>Max<br />Streak</center>
+                </div>
+              </div>
+            </div>
+            <p>GUESS DISTRIBUTION</p>
+            <div class="graph">
+              <div class="graph-row">
+                <div class="graph-label">1</div>
+                <div id="graph-1" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">2</div>
+                <div id="graph-2" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">3</div>
+                <div id="graph-3" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">4</div>
+                <div id="graph-4" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">5</div>
+                <div id="graph-5" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">6</div>
+                <div id="graph-6" class="graphElem"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer id="site-footer">
+        <div id="database-link">
+          <a
+            href="https://costcofdb.com/food-database"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Costco Food Database</a
+          >
+        </div>
+        <div id="dev-name">&copy;birblover</div>
+      </footer>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBNB8SDriy4D_O0_X4g1f4JU4wXl8wJr08",
+        authDomain: "newagent-nqcafp.firebaseapp.com",
+        databaseURL: "https://newagent-nqcafp.firebaseio.com",
+        projectId: "newagent-nqcafp",
+        storageBucket: "newagent-nqcafp.appspot.com",
+        messagingSenderId: "332653555281",
+        appId: "1:332653555281:web:c051886d8575e81207d270"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
     </script>
   </body>
 </html>
