@@ -17,7 +17,7 @@ let warningTimeout;
 */
 
 //The day Costcodle was launched. Used to find game number each day
-const costcodleStartDate = new Date("09/21/2023");
+const costcodleStartDate = new Date("12/31/2023");
 const gameNumber = getGameNumber();
 
 //Elements with event listeners to play the game
@@ -62,13 +62,13 @@ function playGame() {
 
 //Fetches the current day's game data from the json and starts game
 function fetchGameData(gameNumber) {
-  fetch("./games.json")
+  fetch("./products.json")
     .then((response) => response.json())
     .then((json) => {
-      productName = json[`game-${gameNumber}`].name;
-      productPrice = json[`game-${gameNumber}`].price;
+      productName = json[`${gameNumber}`].name;
+      productPrice = json[`${gameNumber}`].price;
       productPrice = Number(productPrice.slice(1, productPrice.length));
-      productImage = json[`game-${gameNumber}`].image;
+      productImage = json[`${gameNumber}`].image;
 
       initializeGame();
     });
@@ -202,7 +202,7 @@ function handleInput() {
 }
 
 function copyStats() {
-  let output = `Costcodle #${gameNumber}`;
+  let output = `Michaeldle #${gameNumber}`;
   if (!gameState.hasWon) {
     output += ` X/6\n`;
   } else {
@@ -248,14 +248,14 @@ function copyStats() {
     if (navigator.canShare) {
       navigator
         .share({
-          title: "COSTCODLE",
+          title: "MICHAELDLE",
           text: output,
-          url: "https://costcodle.com",
+          url: "https://michaeldle.com",
         })
         .catch((error) => console.error("Share failed:", error));
     }
   } else {
-    output += `https://costcodle.com`;
+    output += `https://michaeldle.com`;
     navigator.clipboard.writeText(output);
     displayToast();
   }
@@ -423,7 +423,7 @@ function switchState(event) {
   }
 
   if (overlayElem.style.display === "flex") {
-    title.innerHTML = `COSTCO<span class="costco-blue">DLE</span>`;
+    title.innerHTML = `MICHAEL<span class="costco-blue">DLE</span>`;
     overlayElem.style.display = "none";
     return;
   }
