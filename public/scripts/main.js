@@ -1,6 +1,6 @@
 /*
   Declaration of global variables
-*/
+*/ 
 
 //Product info variables
 let productName;
