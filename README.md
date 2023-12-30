@@ -7,24 +7,20 @@
     Michaeldle.com
   </a> <br/>
   <a href="https://newagent-nqcafp.web.app">Backup link</a>
+  <br/>
 
-<h3 align="center">COSTCODLE</h3>
+<h3 align="center">Michaeldle</h3>
 
   <p align="center">
-    A Wordle-esque daily guessing game for Costco food products!
+    A Wordle-esque daily guessing game for Michael's crafting products!
     <br />
-    <a href="https://github.com/KermWasTaken/costcodle"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://costcodle.com">View Demo</a>
     ·
-    <a href="https://github.com/KermWasTaken/costcodle/issues">Report Bug</a>
+    <a href="https://github.com/Birblover/michaeldle/issues">Report Bug</a>
     ·
-    <a href="https://github.com/KermWasTaken/costcodle/issues">Request Feature</a>
+    <a href="https://github.com/Birblover/michaeldle/issues">Request Feature</a>
   </p>
   
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 </div>
 
