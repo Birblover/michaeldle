@@ -450,7 +450,7 @@ function switchState(event) {
   }
 
   if (overlayElem.style.display === "flex") {
-    title.innerHTML = `MICHAEL<span class="costco-blue">DLE</span>`;
+    title.innerHTML = `Michael<span class="costco-blue">dle</span>`;
     overlayElem.style.display = "none";
     return;
   }
