@@ -43,16 +43,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://costcodle.com)
-
-Guess the COSTCODLE in 6 tries.
+Guess the Michaeldle in 6 tries.
 
 * Each guess must be a valid price.
 * Incorrect guesses will help guide you to the target price.
 
 If you guess within 5% of the target price, you win!
 
-A new COSTCODLE is available every day!
+A new Michaeldle is available every day!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,9 +72,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Zachary Kermitz  - zakkermitz@gmail.com
-
-Project Link: [https://github.com/KermWasTaken/costcodle](https://github.com/KermWasTaken/costcodle)
+Zoe McLaughlin  - zoebe44@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +81,7 @@ Project Link: [https://github.com/KermWasTaken/costcodle](https://github.com/Ker
 
 This project would not have been possible without the following resources:
 
-* [Costco Food Database](https://costcofdb.com/food-database)
+* [Costcodle]([https://costcofdb.com/food-database](https://github.com/KermWasTaken/costcodle))
 * [Wordle](https://www.nytimes.com/games/wordle/index.html)
 * [Tradle](https://oec.world/en/tradle/)
 * [Currency Format Input Field by Wade Williams](https://codepen.io/559wade/pen/LRzEjj)
@@ -96,11 +92,8 @@ This project would not have been possible without the following resources:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/github/license/KermWasTaken/costcodle.svg?style=for-the-badge
-[license-url]: https://github.com/KermWasTaken/costcodle/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/zacharykermitz
-[product-screenshot]: assets/costcodle.png
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT
+[license-url]: https://github.com/Birblover/michaeldle/blob/main/LICENSE
 [HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [HTML-url]: https://en.wikipedia.org/wiki/HTML
 [CSS3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
