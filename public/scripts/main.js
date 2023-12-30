@@ -19,7 +19,7 @@ let warningTimeout;
 */
 
 //The day Costcodle was launched. Used to find game number each day
-const costcodleStartDate = new Date("12/29/2023");
+const michaeldleStartDate = new Date("12/29/2023");
 const gameNumber = getGameNumber();
 
 //Elements with event listeners to play the game
@@ -80,6 +80,13 @@ function fetchGameData(gameNumber) {
     }
   } else if (+gameNumber.toString().slice(-1) == 3) {
     string = "./calligraphy.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
+  } else if (+gameNumber.toString().slice(-1) == 4) {
+    string = "./markers.json"
     if (gameNumber > 10) {
       localGameNumber = gameNumber - 9;
     } else {
@@ -327,7 +334,7 @@ function removeEventListeners() {
 }
 
 /*
-  Handles the logic of Costocodle
+  Handles the logic of Michaeldle
   Creates a guess object based on user guess and checks win condition
 */
 
@@ -464,7 +471,7 @@ function switchState(event) {
   }
 
   function renderInfo() {
-    title.innerHTML = `HOW TO <span class="costco-blue">PLAY</span>`;
+    title.innerHTML = `How To <span class="costco-blue">Play</span>`;
     if (!title.classList.contains("info-title")) {
       title.classList.add("info-title");
     }
@@ -534,7 +541,7 @@ function shakeBox() {
 
 function getGameNumber() {
   const currDate = new Date();
-  let timeDifference = currDate.getTime() - costcodleStartDate.getTime();
+  let timeDifference = currDate.getTime() - michaeldleStartDate.getTime();
   let dayDifference = timeDifference / (1000 * 3600 * 24);
 
   return Math.ceil(dayDifference);
