@@ -20,7 +20,7 @@
     <a href="https://github.com/Birblover/michaeldle/issues">Request Feature</a>
   </p>
   
-[![MIT License][license-shield]][license-url]
+[![license-shield][license-url]
 
 </div>
 
