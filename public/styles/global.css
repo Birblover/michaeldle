@@ -9,10 +9,10 @@
 }
 
 body {
-  font-family: "VT323", monospace;
+  font-family: "Georgia", monospace;
   font-size: 30px;
 
-  background-color: gainsboro;
+  background-color: rgb(255, 227, 227);
 }
 
 body::-webkit-scrollbar {
@@ -51,7 +51,7 @@ img {
 }
 
 .costco-blue {
-  color: rgb(0, 96, 169);
+  color: rgb(186, 104, 104);
 }
 
 .hide {
@@ -86,15 +86,15 @@ img {
 
   width: 344px;
 
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid rgb(177, 165, 165);
 }
 
 .title {
-  font-size: 60px;
+  font-size: 35px;
 }
 
 .info-title {
-  font-size: 52px;
+  font-size: 35px;
 }
 
 #info-button {
