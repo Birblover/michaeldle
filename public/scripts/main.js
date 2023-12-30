@@ -78,6 +78,13 @@ function fetchGameData(gameNumber) {
     } else {
       localGameNumber = gameNumber;
     }
+  } else if (+gameNumber.toString().slice(-1) == 3) {
+    string = "./calligraphy.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
   } else {
     string = "./trees.json"
     localGameNumber = gameNumber;
@@ -465,7 +472,7 @@ function switchState(event) {
   }
 
   function renderStats() {
-    title.innerHTML = `GAME <span class="costco-blue">STATS</span>`;
+    title.innerHTML = `Game <span class="costco-blue">Stats</span>`;
 
     renderStatistics();
     graphDistribution();
