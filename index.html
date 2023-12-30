@@ -6,19 +6,7 @@
     <title>MICHAELDLE</title>
 
     <!-- Google tag (gtag.js) -->
-   <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-J8Q97VV1GQ"
-    ></script> 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-J8Q97VV1GQ");
-    </script> 
 
     <!-- Favicon Configuration -->
     <link
@@ -320,5 +308,25 @@
         <div id="dev-name">&copy;birblover</div>
       </footer>
     </div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBNB8SDriy4D_O0_X4g1f4JU4wXl8wJr08",
+        authDomain: "newagent-nqcafp.firebaseapp.com",
+        databaseURL: "https://newagent-nqcafp.firebaseio.com",
+        projectId: "newagent-nqcafp",
+        storageBucket: "newagent-nqcafp.appspot.com",
+        messagingSenderId: "332653555281",
+        appId: "1:332653555281:web:c051886d8575e81207d270"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

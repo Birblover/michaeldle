@@ -17,7 +17,7 @@ let warningTimeout;
 */
 
 //The day Costcodle was launched. Used to find game number each day
-const costcodleStartDate = new Date("12/31/2023");
+const costcodleStartDate = new Date("12/29/2023");
 const gameNumber = getGameNumber();
 
 //Elements with event listeners to play the game
@@ -62,13 +62,13 @@ function playGame() {
 
 //Fetches the current day's game data from the json and starts game
 function fetchGameData(gameNumber) {
-  fetch("./products.json")
+  fetch("./trees.json")
     .then((response) => response.json())
     .then((json) => {
-      productName = json[`${gameNumber}`].name;
-      productPrice = json[`${gameNumber}`].price;
+      productName = json[`${gameNumber}`].Title;
+      productPrice = json[`${gameNumber}`].Field3;
       productPrice = Number(productPrice.slice(1, productPrice.length));
-      productImage = json[`${gameNumber}`].image;
+      productImage = json[`${gameNumber}`].Image;
 
       initializeGame();
     });
