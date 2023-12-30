@@ -70,7 +70,7 @@ Zoe McLaughlin  - zoebe44@gmail.com
 
 This project would not have been possible without the following resources:
 
-* [Costcodle]([https://costcofdb.com/food-database](https://github.com/KermWasTaken/costcodle))
+* <a href="https://github.com/KermWasTaken/costcodle](https://github.com/KermWasTaken/costcodle">Costcodle</a>
 * [Wordle](https://www.nytimes.com/games/wordle/index.html)
 * [Tradle](https://oec.world/en/tradle/)
 * [Currency Format Input Field by Wade Williams](https://codepen.io/559wade/pen/LRzEjj)
