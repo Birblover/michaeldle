@@ -92,6 +92,27 @@ function fetchGameData(gameNumber) {
     } else {
       localGameNumber = gameNumber;
     }
+  } else if (+gameNumber.toString().slice(-1) == 5) {
+    string = "./pastels.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
+  } else if (+gameNumber.toString().slice(-1) == 6) {
+    string = "./printmaking.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
+  } else if (+gameNumber.toString().slice(-1) == 7) {
+    string = "./kitchenDecor.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
   } else {
     string = "./trees.json"
     localGameNumber = gameNumber;
