@@ -101,6 +101,10 @@ function fetchGameData(gameNumber) {
       .then((json) => {
         productName = json[`${localGameNumber}`].Title;
         productPrice = json[`${localGameNumber}`].Field3;
+        if (productPrice.includes(",")) {
+          productPrice = productPrice.replace(",", "");
+          console.log(productPrice);
+        }
         productPrice = Number(productPrice.slice(1, productPrice.length));
         productImage = json[`${localGameNumber}`].Image;
 
