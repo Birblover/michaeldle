@@ -113,6 +113,13 @@ function fetchGameData(gameNumber) {
     } else {
       localGameNumber = gameNumber;
     }
+  } else if (+gameNumber.toString().slice(-1) == 8) {
+    string = "./kitchenStorage.json"
+    if (gameNumber > 10) {
+      localGameNumber = gameNumber - 9;
+    } else {
+      localGameNumber = gameNumber;
+    }
   } else {
     string = "./trees.json"
     localGameNumber = gameNumber;
