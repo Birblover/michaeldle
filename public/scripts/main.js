@@ -135,9 +135,25 @@ function fetchGameData(gameNumber) {
         }
         productPrice = Number(productPrice.slice(1, productPrice.length));
         productImage = json[`${localGameNumber}`].Image;
-
+        productPrice = addZeroes(productPrice);
         initializeGame();
       });
+}
+
+/*
+  https://stackoverflow.com/a/24039563 - ensures that displayed price in answer does not truncate (i.e. "$7.5" instaed of "$7.50") 
+*/
+
+function addZeroes(num) {
+  var num = Number(num);
+  if (isNaN(num)) {
+      return 0;
+  }
+  // If there is no decimal, or the decimal is less than 2 digits, toFixed
+  if (String(num).split(".").length < 2 || String(num).split(".")[1].length<=2 ){
+      num = num.toFixed(2);
+  }
+  return num;
 }
 
 /*
